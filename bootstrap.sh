@@ -14,7 +14,9 @@ sed s/HOSTNAME/$HOSTNAME/ /usr/local/hadoop/etc/hadoop/core-site.xml.template > 
 
 
 service sshd start
-$HADOOP_PREFIX/sbin/start-dfs.sh
+# $HADOOP_PREFIX/sbin/start-dfs.sh
+$HADOOP_PREFIX/sbin/hadoop-daemon.sh start namenode 
+$HADOOP_PREFIX/sbin/hadoop-daemon.sh start datanode
 $HADOOP_PREFIX/sbin/start-yarn.sh
 
 if [[ $1 == "-d" ]]; then

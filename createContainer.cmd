@@ -1,2 +1,1 @@
-
-docker run -P -it --name hadoop-centos6 hadoop-centos6:0.3 /etc/bootstrap.sh -bash
+docker run -P -it hadoop-centos6:0.2 /etc/bootstrap.sh -bash
